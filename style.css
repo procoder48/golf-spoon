@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items:center;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 40px;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+.logo{
+    width: 45px;
+    margin: 30px 0px;
+    margin-left: 15px;
+}
+.menu{
+    width: 25px;
+    display: none;
+    margin-right: 25px;
+}
+.act{
+    color:rgb(26, 103, 26);
+}
+#bgdiv{
+    background-size: 100%; 
+   background-repeat: no-repeat; 
+   width: 100%;
+   background-color: rgb(26, 103, 26);
+}
+#home h1{
+    font-size: 50px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: default;
+
+}
+.fontcur{
+    font-family: "Playwrite NZ", cursive;
+  font-weight:600;
+  font-size: 22px;
+  letter-spacing: 1px;
+  cursor: default;
+}
+#home #bgdiv p{
+    margin-top: 4px;
+}
+.pt1 h1{
+    font-size: 55px;
+}
+.pt1 h2{
+    font-size: 45px;
+    margin: 20px 0 10px;
+    font-weight:600;
+    letter-spacing: 1px;
+}
+.pt1 p{
+    width: 550px;
+    font-size: 20px;
+    font-weight: 100;
+    word-spacing: 0.05cm;
+}
+.set{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.pt1{
+    flex-basis:40% ;
+    position: relative;
+    margin-left: 2cm;
+}
+#line::before{
+    content: "";
+    width: 6px;
+    height: 95%;
+    background:green;
+    position: absolute;
+    left: -40px;
+    top: 8%;
+}
+.pt2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+.pt2 img{
+    width: 80%;
+    border-radius: 0.2cm;
+    margin-left: 1cm;
+}
+.cardsdiv{
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    height: 100%;
+}
+.card{
+    float: left;
+    margin-bottom: 1cm;
+    width: 23%;
+    background-color: #e5e8eb;
+    margin-left: 25px;
+    height: 335px; /* Height of the card */
+    perspective: 1000px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card img{
+    width: 100%;
+}
+.card h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 0.9cm;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.up .back{
+    transform: rotateX(180deg);
+}
+.up:hover .card-inner {
+    transform: rotateX(180deg);
+}
+.down .back {
+    transform: rotateX(-180deg);
+}
+
+.down:hover .card-inner {
+    transform: rotateX(-180deg);
+}
+
+.front {
+    background-color: #e5e8eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flip .back{
+    transform: rotateY(180deg);
+}
+.back {
+    background-color: #a3aeb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #545556;
+    font-size: 22px;
+}
+.back p{
+    width: 300px;
+}
+.uline{
+    width: 10cm;
+}
+.menubtn{
+    height: 1cm;
+    width: 25%;
+    font-size: 16px;
+    background-color: #545556;
+    color: #e5e8eb;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.menubtn:hover{
+    transition: 0.3s;
+    background-color: #a3aeb1;
+    color: #22252b;
+}
+.foot{
+    background-color: #22252b;
+    height: 9cm;
+}
+.map{
+    float: left;
+    width: 40%;
+}
+.quick_link{
+    float: left;
+}
+.address{
+    float: left;
+    margin-left: 1cm;
+}
+.map iframe{
+    margin: 1cm;
+    width: 90%;
+    height: 7cm;
+}
+.quick_link h3 , .address h3{
+    font-size: 22px;
+    margin-top: 1cm;
+    margin-left: 1cm;
+    color: #a3aeb1;
+}
+.quick_link a{
+    text-decoration: none;
+    color: #e5e8eb;
+    font-size: 18px;
+    margin-left: 1.5cm;
+}
+.quick_link p{
+    margin-top: 0.5cm;
+}
+.quick_link a:hover{
+    color:#a3aeb1;
+    transition: 0.3s;
+}
+.address p{
+    text-decoration: none;
+    color: #e5e8eb;
+    font-size: 18px;
+    margin-left: 1.2cm;
+    margin-top: 0.4cm;
+}
+.fir p{
+    width: 215px;
+}
+
+.footimg:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.ico , .pb{
+    float: left;
+}
+.pb p{
+    margin: 0.5cm;
+    font-size: 17px;
+}
+.ico{
+    margin-left: 40%;
+}
+.ico i{
+    margin-left: 1cm;
+    margin-bottom: 1cm;
+    margin-top: 0.2cm;
+    font-size:30px;
+    cursor: pointer;
+}
+.ico i:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.menuh2{
+    margin: 0.5cm;
+    font-family: "Nunito", sans-serif;
+    font-size: 37px;
+    color: #22252b;
+}
+.menucard{
+    width: 8cm;
+    height:auto;
+    float: left;
+    margin-left: 1.5cm;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.menucard img{
+    width: 100%;
+}
+.menucard p{
+    width: 7cm;
+    font-size: 19px;
+    margin: 10px;
+}
+.rp{
+    margin:20px;
+    font-size: 18px;
+}
+.prcdiv{
+    font-size: 25px;
+    float: right;
+    margin-bottom: 20px;
+    color: #545556;
+}
+.rows{
+    height: 13cm;
+}
+.glim{
+    height: 6cm;
+    margin-left: 15px;
+    margin-top: 0.1cm;
+}
+.glim:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+.misbx{
+    margin-left: 16.65%;
+    box-shadow: 10px 10px #53655c;
+    width: 66.6%;
+    height: auto;
+    margin-bottom: 1cm;
+}
+.misbx h2{
+    font-size: 35px;
+    padding: 20px;
+    font-family: "Nunito", sans-serif;
+}
+.misbx p{
+    font-size: 19px;
+    padding: 25px;
+}
+.storybx{
+    width: 95%;
+    margin-bottom: 0.5cm;
+}
+.storybx p{
+    width: 96%;
+    font-size:19px;
+    font-family: "Yusei Magic", sans-serif;
+}
+.storybx h2{
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+@media only screen and (max-width:700px){
+    .set{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    nav ul{
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 75px; 
+        right: 0;
+        background: rgb(13, 81, 13);
+        text-align: center;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .menu{
+        display: block;
+    }
+    #menu li a{
+        color: white;
+    }
+    #menu{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .pt2{
+        margin-bottom:50px ;
+    }
+    .pt2 img{
+        width: 100%;
+        margin-left:0;
+        border-radius: 0px;
+    }
+    #hoimg{
+        margin-top: -1.5cm;
+    }
+    .pt1 h2{
+        font-size: 32px;
+    }
+    .pt1 p{
+        font-weight:normal;
+        width:100%;
+    }
+    .pt1{
+        margin-left: 20px;
+    }
+    #twotexscreenh1{
+        font-size: 35px;
+    }
+    #bgdiv{
+        background-size:auto;
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .uline{
+        width: 50%;
+    }
+    .pt2 .hmpgabslimg{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 0.7cm;
+        border-radius: 0.2cm;
+    }
+    .fir p{
+        width: 190px;
+        margin-left: -0.5cm;
+    }
+    .quick_link{
+        margin-left:-0.5cm;
+    }
+    .address .tt{
+        width: 4cm;
+    }
+    .ts{
+        margin-left: 0.2cm;
+    }
+    .foot{
+        height:18cm;
+    }
+    .map iframe{
+        margin: 0cm;
+        margin-top: 1cm;
+        margin-left: 0.2cm;
+        width: 90%;
+        height: 7cm;
+    }
+    .ic{
+        display: block;
+    }
+    .ico{
+        margin-left: 7%;
+        margin-top: 0.2cm;
+    }
+    .menucard{
+        width: 90%;
+        margin: 5%;
+    }
+    .glim{
+        width: 92%;
+        height: auto;
+        margin-left: 0.25%;
+        border-radius: 12px;
+    }
+    .misbx{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
